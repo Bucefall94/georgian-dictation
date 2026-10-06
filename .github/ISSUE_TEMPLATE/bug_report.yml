@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible problem in Georgian Dictation
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not paste API keys, ADC files, private transcripts, or unredacted logs."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Speech engine
+      options:
+        - NVIDIA local streaming
+        - NVIDIA local accurate
+        - Deepgram Nova-3
+        - Not related to speech recognition
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Windows version, Python version if running from source, GPU/runtime if relevant.
