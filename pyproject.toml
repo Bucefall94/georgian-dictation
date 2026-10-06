@@ -26,7 +26,7 @@ dependencies = [
   "cffi==2.1.1",
   "websocket-client==1.9.2",
   "google-genai==2.23.0",
-  "google-auth==2.58.0",
+  "google-auth==2.59.1",
 ]
 
 [project.scripts]
