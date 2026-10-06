@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "models": [
+    {
+      "id": "georgian-streaming-80ms",
+      "name": "NVIDIA Georgian FastConformer Streaming 80 ms",
+      "short_name": "FAST / LIVE",
+      "source": "nvidia/stt_ka_fastconformer_hybrid_transducer_ctc_large_streaming_80ms_pc",
+      "filename": "georgian-fastconformer-streaming.gguf",
+      "kind": "streaming",
+      "outtype": "q8_0",
+      "approx_size_mb": 139,
+      "priority": "Lowest Latency",
+      "reference_wer": {"Common Voice 17": 7.44, "FLEURS": 16.0},
+      "description": "ყველაზე დაბალი დაყოვნება და რეალურ დროში კარნახი."
+    },
+    {
+      "id": "georgian-accurate-bf16",
+      "name": "NVIDIA Georgian FastConformer Hybrid Large — Accurate",
+      "short_name": "ACCURATE",
+      "source": "nvidia/stt_ka_fastconformer_hybrid_large_pc",
+      "filename": "georgian-fastconformer-accurate-bf16.gguf",
+      "kind": "accurate",
+      "outtype": "bf16",
+      "approx_size_mb": 240,
+      "priority": "High Accuracy",
+      "reference_wer": {"Common Voice 17": 5.73, "FLEURS": 13.44},
+      "description": "სრული ფრაზის კონტექსტი და მაქსიმალური სიზუსტე."
+    },
+    {
+      "id": "deepgram-nova-3-ka",
+      "name": "Deepgram Nova-3 Georgian",
+      "short_name": "DEEPGRAM NOVA-3",
+      "source": "Deepgram Nova-3 / language=ka",
+      "filename": "",
+      "kind": "cloud",
+      "outtype": "cloud",
+      "approx_size_mb": 0,
+      "priority": "High Accuracy",
+      "reference_wer": {},
+      "description": "Cloud streaming და გრძელი კარნახი ქართული ენისთვის. აუდიო იგზავნება Deepgram-ში მხოლოდ ამ engine-ის არჩევისას."
+    }
+  ]
+}
